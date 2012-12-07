@@ -2,10 +2,14 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Bootswatch: Cosmo</title>
+    <title>Chatroom</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="An ode to Metro.">
     <meta name="author" content="Thomas Park">
+
+    <script type="text/javascript">
+      var Name = "<%= session[:name] %>";
+    </script>
 
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -75,9 +79,6 @@
 </div> -->
 
     <div id="chat-container" class="" style="padding-left: 20px; position:absolute; bottom: 69px; width: 1148px; overflow-y: scroll; ">
-        <div style="color: #00A801;">Sifi Connected</div>
-        <div>Frankie: Hi Sifi.</div>
-        <div>Sifi: Hello world!</div>
     </div>
 
     <form id="chat-entry" class="form-horizontal well" style="position:absolute; width:1130px; margin-bottom: 0; bottom: 0; text-align: center">
@@ -100,9 +101,6 @@
     <!-- // <script src="bootstrap/js/application.js"></script> -->
     <!-- // <script src="../js/bootswatch.js"></script> -->
 
-    <script type="text/javascript">
-      var Name = "<%= session[:name] %>";
-    </script>
 
   </body>
 </html>
