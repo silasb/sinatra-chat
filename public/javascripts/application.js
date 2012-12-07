@@ -1,14 +1,20 @@
 $(function(){
+
+  $('#chat-container').css('height', window.document.height - 70 - 33)
+
+  $('#chat-entry input[name="entry"]').focus();
+
   var client = new Faye.Client('/faye');
 
   var subscription = client.subscribe('/messages', function(message) {
-    $("<li/>").text(message['text']).appendTo("#messages");
+    add_chat(message['name'], message['text'])
   });
 
-  $("#send_form").submit(function(e){
+  $('#chat-entry').submit(function(e){
     e.preventDefault();
-    var message = $("#message").val();
-    client.publish('/messages', {text: message});
+    var message = $('#chat-entry input[name="entry"]').val()
+    $('#chat-entry input[name="entry"]').val('')
+    client.publish('/messages', {text: message, name: Name});
   });
 
   var showDebugMessages = false;
@@ -22,3 +28,9 @@ $(function(){
   };
   
 });
+
+add_chat = function(name, msg) {
+  $('#chat-container').append( $('<div>').html(name + ": " + msg) )
+  var objDiv = document.getElementById("chat-container");
+  objDiv.scrollTop = objDiv.scrollHeight;
+}

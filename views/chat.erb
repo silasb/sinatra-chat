@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Bootswatch: Cosmo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="An ode to Metro.">
+    <meta name="author" content="Thomas Park">
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <!-- <link href="../css/docs.css" rel="stylesheet"> -->
+
+    <style>
+
+      #chat-container::-webkit-scrollbar { 
+        display: none; 
+      }
+    </style>
+
+  </head>
+
+  <body class="preview" data-spy="scroll" data-target=".subnav" data-offset="80">
+    <!-- // <script src="../js/bsa.js"></script> -->
+
+
+    <div class="container" style="">
+
+      <!-- Masthead
+      ================================================== -->
+      <header class="jumbotron subhead" id="overview">
+        <div class="subnav">
+          <ul class="nav nav-pills">
+            <li><a href="#typography">Files</a></li>
+            <li><a href="#navbar">Settings</a></li>
+          </ul>
+        </div>
+      </header>
+
+<!-- 
+    <form class="well form-search">
+        <input type="text" class="input-medium search-query">
+        <button type="submit" class="btn">Search</button>
+      </form>
+
+
+  <div class="span7"></div>
+
+  <div class="span4">
+    <div class="well" style="padding: 8px 0;">
+      <ul class="nav nav-list">
+        <li class="nav-header">List header</li>
+        <li class="active"><a href="#">Home</a></li>
+        <li><a href="#">Library</a></li>
+        <li><a href="#">Applications</a></li>
+        <li class="nav-header">Another list header</li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Settings</a></li>
+        <li class="divider"></li>
+        <li><a href="#">Help</a></li>
+      </ul>
+    </div>
+  </div>
+
+<div class="row">
+    <div class="span4">
+      <div class="progress">
+        <div class="bar" style="width: 60%;"></div>
+      </div>
+    </div>
+</div> -->
+
+    <div id="chat-container" class="" style="padding-left: 20px; position:absolute; bottom: 69px; width: 1148px; overflow-y: scroll; ">
+        <div style="color: #00A801;">Sifi Connected</div>
+        <div>Frankie: Hi Sifi.</div>
+        <div>Sifi: Hello world!</div>
+    </div>
+
+    <form id="chat-entry" class="form-horizontal well" style="position:absolute; width:1130px; margin-bottom: 0; bottom: 0; text-align: center">
+      <input type="text" name='entry' class="" id="" style="width: 90%">
+
+      <input type="submit" class="btn btn-primary" value="Send!" />
+    </form>
+
+</section>
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="/faye.js"></script>
+    <script type="text/javascript" src="/javascripts/application.js"></script>
+
+    <!-- // <script src="bootstrap/js/application.js"></script> -->
+    <!-- // <script src="../js/bootswatch.js"></script> -->
+
+    <script type="text/javascript">
+      var Name = "<%= session[:name] %>";
+    </script>
+
+  </body>
+</html>

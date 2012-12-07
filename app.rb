@@ -13,7 +13,7 @@ class App < Sinatra::Base
   
   get "/" do
     redirect "/sign_in" unless current_user
-    slim :homepage
+    erb :chat
   end
   
   get "/sign_in" do
